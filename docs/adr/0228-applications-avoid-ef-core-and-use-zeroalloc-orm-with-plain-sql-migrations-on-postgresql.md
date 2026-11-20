@@ -6,7 +6,7 @@ accepted (2026-11-20). Records a pattern found across the products.
 
 ## Context
 
-Evidence in product ADRs: ADR-016 (MagicLink.NET), ADR-045 (Daedalus.NET replaced EF Core with ZeroAlloc.ORM), ADR-207 (ZeroAlloc.Templates). ADR-081 (Mnemosyne.NET) also uses PostgreSQL as its only store. EF Core has no Native AOT path for its stores. Libraries still offer EF Core adapters for their users (ADR-151 Mapping, ADR-186 Scheduling).
+Evidence in product ADRs: ADR-016 (MagicLink.NET), ADR-045 (Daedalus.NET replaced EF Core with ZeroAlloc.ORM), ADR-207 (ZeroAlloc.Templates). ADR-081 (Mnemosyne.NET) also uses PostgreSQL as its only store. EF Core's Native AOT support (precompiled queries) is experimental, and Microsoft says it is not yet suited for production use. Libraries still offer EF Core adapters for their users (ADR-151 Mapping, ADR-186 Scheduling).
 
 ## Decision
 

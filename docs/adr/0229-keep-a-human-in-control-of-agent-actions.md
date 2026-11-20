@@ -17,4 +17,4 @@ Evidence in product ADRs: ADR-024 (AgenticAI.DotNet, role-bound tools), ADR-046 
 ## Consequences
 
 * Agents are slower where a person is in the loop; that is the trade.
-* An unattended build session works within limits a person set beforehand: it may merge a pull request once CI is green, but never releases, publishes or force-pushes (see [standards.md](../../standards.md)).
+* An unattended build session works within limits a person set beforehand: it may merge a pull request once CI is green and its own review passes, but never releases, publishes or force-pushes (see [standards.md](../../standards.md)).
