@@ -12,7 +12,7 @@ Libraries in the line set `IsAotCompatible`, treat AOT warnings as errors, and C
 
 * Libraries are Native AOT compatible (`IsAotCompatible`), and AOT and trimming warnings are errors.
 * Applications and CLIs are published as Native AOT.
-* CI enforces it, with a native publish smoke test or a zero-warning baseline.
+* CI enforces it. Every application and CLI passes a Native AOT publish in CI. For libraries, a zero-warning AOT and trimming analysis is enough.
 * A product that cannot meet this yet says so in its own ADR and makes AOT a goal until it can (as MagicLink.NET does).
 
 ## Consequences
