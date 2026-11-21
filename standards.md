@@ -38,6 +38,15 @@ These hold for every build session, attended or not, in any CLI. Build sessions 
 * Check each review finding against the code; fix what is real and say why when a finding is wrong.
 * For work that touches several files, put a short plan in the pull request description.
 * One issue is one pull request; a Spec task too large for one pull request is split when its issue is written.
+* Fix the cause, not the symptom: no suppressed diagnostic, excluded analyzer or hidden failure to get a green build. When a workaround is the only step for now, for example while waiting on an upstream fix, say what it hides and track the real fix as an issue.
+
+## Public text
+
+Commits, pull requests, issues and comments in these repositories are public and permanent.
+
+* No AI signatures: no AI co-author trailer, no "Generated with" line and no AI session link in commits, pull request bodies, issues or comments. A squash merge copies commit bodies into history, so they must be absent from the commits too. The `commit-hygiene` check of ci-baseline's `conventions.yml` enforces it for commits in a repository that turns it on.
+* No nested parentheses in a commit body: release-please cannot parse such a commit and drops it from the changelog while its workflow succeeds. Use a fenced code block or rephrase.
+* No private details: no hostnames or internal addresses, user names, email addresses, names of household members, home or environment names, tokens, entry ids or paths under a home directory. Describe the problem generically and keep what a maintainer needs: versions, error messages and the relevant code.
 
 ## Unattended build sessions
 
