@@ -24,4 +24,4 @@ SemVer does not say whether dropping a target framework is a breaking change; it
 
 * Libraries that still target net8.0 or net9.0 (ZeroAlloc.Telemetry, AI.Sentinel, Thalos.NET and several ZeroAlloc libraries) drop them in their next major.
 * CI no longer needs the .NET 8 and .NET 9 runtimes once those majors ship.
-* Users on an unsupported .NET version keep the last major that supported it, but get no new versions.
+* Users on an unsupported .NET version keep the last major that supported it, but get no new versions, apart from critical and high security fixes for 6 months after the major that dropped their version ([ADR-248](0248-publish-a-vulnerability-disclosure-policy-for-every-product.md), 2026-11-21).
