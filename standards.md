@@ -22,6 +22,7 @@ The short version of the product-line decisions in [docs/adr](docs/adr/README.md
 * **A human stays in control of agent actions**: limited tools, a person for destructive steps, sandboxes for agent-written code. ([ADR-229](docs/adr/0229-keep-a-human-in-control-of-agent-actions.md))
 * **No secrets in storage or as a runtime dependency.** ([ADR-230](docs/adr/0230-keep-secrets-out-of-storage-and-out-of-runtime-dependencies.md))
 * **Security boundaries fail closed, helpers fail open.** ([ADR-231](docs/adr/0231-security-boundaries-fail-closed-helpers-fail-open.md))
+* **Share telemetry conventions**: OpenTelemetry GenAI names from the pinned version, product attributes under the product's prefix, and log records that carry their trace. ([docs/telemetry.md](docs/telemetry.md))
 
 ## Unattended build sessions
 
