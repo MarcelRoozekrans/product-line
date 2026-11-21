@@ -20,6 +20,7 @@ Several decisions record a pattern found across the products. Their Context name
 * [ADR-231: Security boundaries fail closed, helpers fail open](0231-security-boundaries-fail-closed-helpers-fail-open.md)
 * [ADR-239: Show people's activity per team by default, and names only after a DPIA](0239-show-peoples-activity-per-team-by-default-and-names-only-after-a-dpia.md)
 * [ADR-248: Publish a vulnerability disclosure policy for every product](0248-publish-a-vulnerability-disclosure-policy-for-every-product.md)
+* [ADR-254: One portable skill format and pack manifest for every product that consumes skills](0254-one-portable-skill-format-and-pack-manifest-for-every-product-that-consumes-skills.md)
 * [ADR-253: Build from Specs without superpowers, with the disciplines as rules and portable skills](0253-build-from-specs-without-superpowers-with-the-disciplines-as-rules-and-portable-skills.md)
 * [ADR-252: Check every release's public API against the last release, so the version follows the API](0252-check-every-releases-public-api-against-the-last-release-so-the-version-follows-the-api.md)
 * [ADR-251: Target the .NET versions Microsoft supports, and drop old ones in a yearly major](0251-target-the-net-versions-microsoft-supports-and-drop-old-ones-in-a-yearly-major.md)

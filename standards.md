@@ -48,6 +48,10 @@ Commits, pull requests, issues and comments in these repositories are public and
 * No nested parentheses in a commit body: release-please cannot parse a body line that starts with a word followed by a nested parenthesis, such as `Foo(Bar(1))`, and drops the commit from the changelog while its workflow succeeds. A fenced code block does not protect it; rephrase so no parenthesis nests. The `commit-hygiene` check runs release-please's own parser on each commit.
 * No private details: no hostnames or internal addresses, user names, email addresses, names of household members, home or environment names, tokens, entry ids or paths under a home directory. Describe the problem generically and keep what a maintainer needs: versions, error messages and the relevant code.
 
+## Skills
+
+* A skill that more than one product or CLI consumes follows the portable profile and ships in a pack with a `skillpack.json`. ([ADR-254](docs/adr/0254-one-portable-skill-format-and-pack-manifest-for-every-product-that-consumes-skills.md))
+
 ## Unattended build sessions
 
 * Read the product's `docs/specs/` and `docs/adr/`, and this file, before writing code.
