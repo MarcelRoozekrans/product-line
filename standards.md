@@ -1,6 +1,6 @@
 # Product-line standards
 
-The short version of the product-line decisions in [docs/adr](docs/adr/README.md), for anyone (person or AI build session) working on a product in this line. Each product's `CLAUDE.md` points here. When a rule and an ADR seem to differ, the ADR wins.
+The short version of the product-line decisions in [docs/adr](docs/adr/README.md), for anyone (person or AI build session) working on a product in this line. Each product's `AGENTS.md` (and the `CLAUDE.md` that imports it) points here. When a rule and an ADR seem to differ, the ADR wins.
 
 ## Rules a build can check
 

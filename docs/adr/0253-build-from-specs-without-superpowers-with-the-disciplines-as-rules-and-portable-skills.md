@@ -27,6 +27,6 @@ Three kinds of consumer need the same skills: people (the maintainer and outside
 
 ## Consequences
 
-* Contributors get the rules through each repository's `AGENTS.md`, whatever CLI they use, and can install the skills without Themis.NET.
+* Contributors get the rules through each product repository's `AGENTS.md`, which Codex, Copilot CLI and Claude Code all read (Claude Code through a `CLAUDE.md` that imports it). That file must point to `standards.md`; a product whose `AGENTS.md` does not yet do so adds the pointer. The skills can be installed without Themis.NET.
 * superpowers-extensions changes: its marketplace drops the `obra/superpowers` dependency, references to `superpowers:` skills become conditional, and its README marks which plugins suit contributors.
 * The next MagicLink.NET milestone runs without superpowers and is compared with the first run on questions asked, pull requests redone and CI failures.
