@@ -22,6 +22,7 @@ The short version of the product-line decisions in [docs/adr](docs/adr/README.md
 * **A human stays in control of agent actions**: limited tools, a person for destructive steps, sandboxes for agent-written code. ([ADR-229](docs/adr/0229-keep-a-human-in-control-of-agent-actions.md))
 * **No secrets in storage or as a runtime dependency.** ([ADR-230](docs/adr/0230-keep-secrets-out-of-storage-and-out-of-runtime-dependencies.md))
 * **Security boundaries fail closed, helpers fail open.** ([ADR-231](docs/adr/0231-security-boundaries-fail-closed-helpers-fail-open.md))
+* **Show people's activity per team by default**: names only after an approval reference such as a DPIA, and team views of at least 3 people. ([ADR-239](docs/adr/0239-show-peoples-activity-per-team-by-default-and-names-only-after-a-dpia.md))
 
 ## Unattended build sessions
 

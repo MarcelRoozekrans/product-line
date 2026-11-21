@@ -18,3 +18,4 @@ Several decisions record a pattern found across the products. Their Context name
 * [ADR-229: Keep a human in control of agent actions](0229-keep-a-human-in-control-of-agent-actions.md)
 * [ADR-230: Keep secrets out of storage and out of runtime dependencies](0230-keep-secrets-out-of-storage-and-out-of-runtime-dependencies.md)
 * [ADR-231: Security boundaries fail closed, helpers fail open](0231-security-boundaries-fail-closed-helpers-fail-open.md)
+* [ADR-239: Show people's activity per team by default, and names only after a DPIA](0239-show-peoples-activity-per-team-by-default-and-names-only-after-a-dpia.md)
