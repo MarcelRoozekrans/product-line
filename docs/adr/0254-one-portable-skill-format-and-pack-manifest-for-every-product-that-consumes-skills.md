@@ -31,8 +31,19 @@ The format is a strict profile of the Agent Skills specification plus a pack man
 **Pack**
 
 * A pack is a git repository whose releases are tags.
-* A manifest `skillpack.json` at the root lists the pack's name, its licence and its skills by folder, and is checked against a JSON schema. Optionally it lists, per CLI, extras only that CLI can use, such as Claude Code hooks; a consumer ignores the extras of a CLI it does not know.
-* Claude Code's `marketplace.json` and `plugin.json` may sit next to it for direct installs; the product line's consumers read `skillpack.json`.
+* A manifest `skillpack.json` at the root has this shape, checked against a JSON schema that ci-baseline ships with its validator:
+
+  ```json
+  {
+    "name": "superpowers-extensions",
+    "license": "MIT",
+    "skills": ["plugins/disciplines/skills/test-first"],
+    "extras": { "claude-code": ["plugins/unattended/hooks/hooks.json"] }
+  }
+  ```
+
+  `name` is the pack name and `license` an SPDX identifier, both required strings. `skills` is a required array of skill folders, as paths relative to the root. `extras` is an optional object whose keys name a CLI and whose values are arrays of paths only that CLI can use; a consumer ignores the extras of a CLI it does not know. The version is the git tag, not a field.
+* For direct installs in Claude Code, the pack may also carry `.claude-plugin/marketplace.json` at the root and a `.claude-plugin/plugin.json` in each plugin folder; the product line's consumers read `skillpack.json`.
 
 **Consumers**
 
