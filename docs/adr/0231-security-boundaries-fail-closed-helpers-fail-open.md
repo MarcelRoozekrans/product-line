@@ -16,5 +16,5 @@ Products decided differently what happens when a check itself fails: AI.Sentinel
 
 ## Consequences
 
-* Rag.NET's retrieval limits by role or trust level are a boundary, so failing open by default contradicts this. *Open: whether Rag.NET changes its default, or argues an exception in its own ADR.*
+* Rag.NET's retrieval limits by role or trust level are a boundary, so failing open by default contradicts this. Settled on 2026-11-21 by Rag.NET's ADR-250: deny-by-default for untagged chunks comes as an option in 1.x and becomes the default in 2.0, with a startup check that warns about untagged chunks.
 * Ariadne.NET's fail-open stays, as long as it acts as a helper and not as a gate.
