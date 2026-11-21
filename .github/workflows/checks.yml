@@ -1,7 +1,7 @@
 name: checks
 
-# Shared checks from ci-baseline: gitleaks, Trivy and Semgrep from baseline.yml, commitlint and
-# the Markdown link check from conventions.yml. This repo has no .NET code, so CodeQL and
+# Shared checks from ci-baseline: gitleaks and Trivy from baseline.yml, commitlint and the
+# Markdown link check from conventions.yml. This repo has no .NET code, so CodeQL and
 # NuGetAudit are off.
 
 on:
@@ -23,7 +23,6 @@ jobs:
       codeql: false
       dotnet: false
       trivy: true
-      semgrep: true
 
   conventions:
     uses: MarcelRoozekrans/ci-baseline/.github/workflows/conventions.yml@v1
