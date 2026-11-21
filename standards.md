@@ -1,6 +1,6 @@
 # Product-line standards
 
-The short version of the product-line decisions in [docs/adr](docs/adr/README.md), for anyone (person or AI build session) working on a product in this line. Each product's `CLAUDE.md` points here. When a rule and an ADR seem to differ, the ADR wins.
+The short version of the product-line decisions in [docs/adr](docs/adr/README.md), for anyone (person or AI build session) working on a product in this line. Each product's `AGENTS.md` (and the `CLAUDE.md` that imports it) points here. When a rule and an ADR seem to differ, the ADR wins.
 
 ## Rules a build can check
 
@@ -27,6 +27,17 @@ The short version of the product-line decisions in [docs/adr](docs/adr/README.md
 * **Target the .NET versions Microsoft supports**: libraries all supported versions, applications and tools the newest LTS, generators netstandard2.0. An unsupported version is dropped in a yearly major. ([ADR-251](docs/adr/0251-target-the-net-versions-microsoft-supports-and-drop-old-ones-in-a-yearly-major.md))
 * **Report vulnerabilities privately**: every repository has a `SECURITY.md` and private vulnerability reporting; receipt within 5 working days, assessment within 15, and a target of 90 days for fix and disclosure, sooner for critical findings; the previous major gets critical and high fixes for 6 months. ([ADR-248](docs/adr/0248-publish-a-vulnerability-disclosure-policy-for-every-product.md), [SECURITY.md](SECURITY.md))
 * **Show people's activity per team by default**: names only after an approval reference such as a DPIA, and team views of at least 3 people. ([ADR-239](docs/adr/0239-show-peoples-activity-per-team-by-default-and-names-only-after-a-dpia.md))
+
+## How to build
+
+These hold for every build session, attended or not, in any CLI. Build sessions do not use superpowers: the Specs, ADRs and issues already decide what to build and how. ([ADR-253](docs/adr/0253-build-from-specs-without-superpowers-with-the-disciplines-as-rules-and-portable-skills.md))
+
+* For a change in behaviour, write a failing test first and see it fail.
+* When something fails, find the cause before changing code again.
+* Before calling work done, run the build and the tests and show their output.
+* Check each review finding against the code; fix what is real and say why when a finding is wrong.
+* For work that touches several files, put a short plan in the pull request description.
+* One issue is one pull request; a Spec task too large for one pull request is split when its issue is written.
 
 ## Unattended build sessions
 
