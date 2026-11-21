@@ -18,7 +18,7 @@ Several products in the line show what people do: Themis.NET makes developers' a
 
 ## Consequences
 
-* Customers can start without a DPIA and turn on names deliberately.
+* Customers can start with names off, and turn them on deliberately. The approval reference is a gate in the product, not an exemption: the customer stays responsible for its own assessment, such as a DPIA, and the product only checks that a reference is present.
 * For Themis.NET, a team lead sees the full sessions of the team, but not whose they are, until names are turned on.
 * While names are off, a product also hides the identifiers it knows that point to a person, such as the git author, branch name, computer name and the person's account in repository remotes. Free text a person typed (a prompt) is shown as it is. *Which identifiers exactly, per product, is decided in that product's Spec.*
 * A team lead can approve, deny or pause the session of an unnamed developer; "a developer in your team" is enough.
