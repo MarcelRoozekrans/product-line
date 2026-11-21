@@ -22,7 +22,7 @@ Moving to a newer version is a change to this document. Each product follows in 
 | Tokens used | metric (histogram) | `gen_ai.client.token.usage` |
 | An audit entry (a scan, a block, an approval) | log record | product-prefixed attributes, see below |
 
-Every span sets `gen_ai.operation.name` to the operation it represents, and the span name starts with that same value: `invoke_agent`, `execute_tool` and `retrieval` as above, and for a model call the operation of the request, such as `chat` or `embeddings`. A span for a tool call sets `gen_ai.tool.name`, and `gen_ai.tool.call.id` when the CLI or model gives one. A span for an agent run sets `gen_ai.agent.name`.
+Every GenAI span in the table above sets `gen_ai.operation.name` to the operation it represents, and its name starts with that same value: `invoke_agent`, `execute_tool` and `retrieval` as above, and for a model call the operation of the request, such as `chat` or `embeddings`. Other spans, such as HTTP client spans, follow their own OpenTelemetry conventions and do not set `gen_ai.operation.name`. A span for a tool call sets `gen_ai.tool.name`, and `gen_ai.tool.call.id` when the CLI or model gives one. A span for an agent run sets `gen_ai.agent.name`.
 
 Durations are in seconds.
 
