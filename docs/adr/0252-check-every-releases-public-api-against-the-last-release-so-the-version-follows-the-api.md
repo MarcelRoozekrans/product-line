@@ -17,13 +17,14 @@ The .NET SDK's package validation compares a package's public API with a baselin
 
 ## Decision
 
-* Conventional Commits propose the version; an API check confirms it.
+* Conventional Commits propose the version; an API check confirms it for breaking changes. Package validation does not report added public API, so for additions the commit type alone decides: a public addition needs `feat:`.
 * Every library runs package validation against its last released version, per package. Rag.NET's setup is the template.
 * A pull request that adds or extends an API compatibility suppression must contain a commit marked as breaking (`!` or `BREAKING CHANGE:`). Otherwise CI fails.
+* The marker must reach the default branch. When a pull request is squash-merged, its title becomes the commit, so the check also requires the marker in the pull request title.
 * Before 1.0, SemVer allows breaking changes in a minor; there the check reports but does not fail.
-* A deliberate break, such as dropping a target framework under [ADR-251](0251-target-the-net-versions-microsoft-supports-and-drop-old-ones-in-a-yearly-major.md), carries a `!`, and the check accepts it.
+* A deliberate break, such as dropping a target framework under [ADR-251](0251-target-the-net-versions-microsoft-supports-and-drop-old-ones-in-a-yearly-major.md), carries a `!` and adds the suppression package validation asks for; together they pass.
 
 ## Consequences
 
-* The version follows the API, not only the commit message.
+* For breaking changes the version follows the API, not only the commit message. Additions still depend on the right commit type.
 * Each repository needs the baseline wiring and the suppression check; Minos.NET and Mnemosyne.NET only move their baseline to the last release.
