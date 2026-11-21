@@ -3,8 +3,6 @@ name: checks
 # Shared checks from ci-baseline: gitleaks and Trivy from baseline.yml, commitlint and the
 # Markdown link check from conventions.yml. This repo has no .NET code, so CodeQL and
 # NuGetAudit are off.
-# Pinned to the merge commit of ci-baseline#9 until the release that contains conventions.yml;
-# then both move to @v1.
 
 on:
   pull_request:
@@ -16,7 +14,7 @@ permissions:
 
 jobs:
   baseline:
-    uses: MarcelRoozekrans/ci-baseline/.github/workflows/baseline.yml@d3b068cd20551b06c9fb2e2bc3c40aab864cdc75
+    uses: MarcelRoozekrans/ci-baseline/.github/workflows/baseline.yml@v1
     permissions:
       contents: read
       security-events: write
@@ -27,4 +25,4 @@ jobs:
       trivy: true
 
   conventions:
-    uses: MarcelRoozekrans/ci-baseline/.github/workflows/conventions.yml@d3b068cd20551b06c9fb2e2bc3c40aab864cdc75
+    uses: MarcelRoozekrans/ci-baseline/.github/workflows/conventions.yml@v1
